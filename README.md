@@ -14,7 +14,7 @@ Type the following commands into SSH, line by line.
 
 ```
 cd /var/www/html/admin/style/vendor/
-sudo git clone https://github.com/jacobbates/pi-hole-midnight.git
+sudo git clone https://github.com/MichalSvatos/pi-hole-lcars-next-gen.git
 sudo rm -f lcars.css
 sudo cp pi-hole-lcars-next-gen/lcars.css .
 sudo rm -rf pi-hole-lcars-next-gen
