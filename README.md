@@ -1,11 +1,11 @@
 # Pi-hole LCARS Next Generation Theme
 LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based on the original theme but heavily customized and refactored (still WIP).
 
-[![Dashboard](https://imgur.com/PXeXZx7)](https://imgur.com/PXeXZx7)
+[![Dashboard](https://i.imgur.com/PXeXZx7.png)](https://imgur.com/PXeXZx7)
 
-[![Settings](https://imgur.com/41QmuUW)](https://imgur.com/41QmuUW)
+[![Settings](https://i.imgur.com/41QmuUW.png)](https://imgur.com/41QmuUW)
 
-[![Adlist](https://imgur.com/uKqZMMG)](https://imgur.com/uKqZMMG)
+[![Adlist](https://i.imgur.com/uKqZMMG.png)](https://imgur.com/uKqZMMG)
 
 ## ⚠️ This theme replaces the original blue LCARS theme ⚠️
 
