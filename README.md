@@ -7,7 +7,8 @@ LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based o
 
 [![Adlist](https://i.imgur.com/uKqZMMG.png)](https://imgur.com/uKqZMMG)
 
-## ⚠️ This theme replaces the original blue LCARS theme ⚠️
+### ℹ️ This theme replaces the original blue LCARS theme
+### ℹ️ Installation does not support Docker at this moment
 
 ## Installation
 Type the following commands into SSH, line by line.
