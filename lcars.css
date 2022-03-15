@@ -1041,14 +1041,16 @@ p.login-box-msg,
 	}
 }
 
-.content-wrapper:before {
-	content: '';
-	position: absolute;
-	height: calc(var(--gap) / 2);
-	top: 1.2rem;
-	background: var(--color-background);
-	width: 5.4rem;
-	right: 70.1rem;
+@media (min-width: 1068px) {
+	.content-wrapper:before {
+		content: '';
+		position: absolute;
+		height: calc(var(--gap) / 2);
+		top: 1.2rem;
+		background: var(--color-background);
+		width: 5.4rem;
+		right: 70.1rem;	
+	}
 }
 
 .content {
