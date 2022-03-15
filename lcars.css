@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.0.0
+	- Version:  1.0.1
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -800,14 +800,11 @@ p.login-box-msg,
 	color: #000;
 	padding: 0;
 	margin: 0;
-	line-height: 1.2;
-	font-size: 1em;
-	text-align: center;
-	word-break: break-word;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	width: 100%;
+	font-size: 1.4rem;
+}
+
+.navbar .nav > li span.hidden-sm {
+	display: none;
 }
 
 .nav.navbar-nav {
@@ -829,20 +826,23 @@ p.login-box-msg,
 @media (min-width: 768px) {
 	.nav.navbar-nav {
 		width: 359.5px;
-		bottom: -6px;
+		bottom: -9px;
 	}
 }
 
 .navbar-custom-menu > .navbar-nav > li {
-	background-color: var(--color-primary-hover);
-	padding: calc(var(--gap) / 3) var(--gap);
-	height: calc(var(--gap) * 3);
-	border-radius: calc(var(--gap) * 2);
+	background-color: var(--color-disabled);
+	padding: var(--gap) var(--gap) calc(var(--gap) / 2) var(--gap);
+	height: calc(var(--gap) * 2.75);
+	border-radius: calc(var(--gap) * 1.5);
 	display: inline-flex;
 	font-size: 1rem;
 	justify-content: flex-end;
 	align-items: flex-end;
 	min-width: calc(var(--gap) * 5);
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: .025rem;
 }
 
 @media (min-width: 576px) {
@@ -917,7 +917,7 @@ p.login-box-msg,
 }
 
 .dropdown.user.user-menu:hover {
-	background-color: var(--color-secondary);
+	background-color: var(--color-quinternary);
 }
 
 .dropdown.user.user-menu a {
@@ -945,8 +945,8 @@ p.login-box-msg,
 	.dropdown.user.user-menu .user-image {
 		top: auto;
 		left: auto;
-		bottom: calc(var(--gap) / 4);
-		right: calc(var(--gap) * 3);
+		bottom: calc(var(--gap) / 2);
+		right: calc(var(--gap) * 3.75);
 		height: var(--gap);
 		width: var(--gap);
 		transform: translate(0, 0);
@@ -955,13 +955,18 @@ p.login-box-msg,
 
 .navbar-text code {
 	display: inline-block;
-	padding: 0;
+	padding: 0 0 1px 0;
 	margin: 0;
 	font-size: inherit;
 	line-height: 0.95;
 	background: none;
 	font-family: inherit;
-	color: var(--color-secondary);
+	color: var(--color-text-dark);
+	white-space: nowrap;
+	border-radius: 0;
+	max-width: 95px;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .navbar-nav > .user-menu .user-image {

@@ -31,6 +31,11 @@ cd /var/www/html/admin/style/themes/
 sudo git reset --hard
 ```
 
+## Changelog
+**1.0.1**
+- fix for small black box in the top bar on smaller screens
+- polishing of the 2(3) buttons in the right top corner
+
 ## Thanks to ...
 - [RD Webdesign](https://github.com/rdwebdesign) - creator of the original theme
 - [LCARS colors](https://codepen.io/Mokurunner/details/wvyKJy)
