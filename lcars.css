@@ -499,7 +499,8 @@ p.login-box-msg,
 	cursor: pointer;
 }
 
-.input-group-btn + input.form-control {
+.input-group-btn + input.form-control,
+.input-group #domain {
 	height: calc(var(--gap) * 2.75);
 }
 
@@ -1017,7 +1018,7 @@ p.login-box-msg,
 .sidebar-mini.sidebar-collapse .content-wrapper,
 .sidebar-mini.sidebar-collapse .right-side,
 .sidebar-mini.sidebar-collapse .main-footer {
-	margin-left: 50.2px !important;
+	margin-left: 50px !important;
 }
 
 
@@ -2296,6 +2297,81 @@ table.dataTable {
 	z-index: 2;
 }
 
+/* CHECKBOXES, RADIOS
+   ========================================================== */
+.box [class*="icheck-"] > label {
+	padding-left: calc(var(--gap) * 3.5) !important;
+}
+
+/* -- checkboxes */
+.box [class*="icheck-"] > input:first-child + input[type="hidden"] + label::before,
+.box [class*="icheck-"] > input:first-child + label::before {
+	width: calc(var(--gap) * 3);
+	height: calc(var(--gap) * 1.5);
+	border-radius: calc(var(--gap) * .75);
+	margin-left: calc((var(--gap) * 3.5) * -1);
+	border: 2px solid var(--color-secondary);
+}
+
+.box [class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label::before,
+.box [class*="icheck-"] > input:first-child:checked + label::before {
+	background-color: transparent;
+	border-color: var(--color-quinternary);
+}
+
+.box [class*="icheck-"] > input:first-child + input[type="hidden"] + label::after,
+.box [class*="icheck-"] > input:first-child + label::after,
+.box [class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label::after,
+.box [class*="icheck-"] > input:first-child:checked + label::after {
+	content: '';
+	width: var(--gap);
+	height: var(--gap);
+	position: absolute;
+	top: calc(var(--gap) / 4);
+	left: calc(var(--gap) / 4);
+	border: 0;
+	transform: none;
+}
+
+.box [class*="icheck-"] > input:first-child + input[type="hidden"] + label::after,
+.box [class*="icheck-"] > input:first-child + label::after {
+	border-radius: 50% 0 0 50%;
+	background-color: var(--color-secondary);
+}
+
+.box [class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label::after,
+.box [class*="icheck-"] > input:first-child:checked + label::after {
+	right: auto;
+	left: calc(var(--gap) * 1.75);
+	border-radius: 0 50% 50% 0;
+	background-color: var(--color-primary);
+}
+
+/* -- radios */
+.box [class*="icheck-"] > input[type="radio"]:first-child + input[type="hidden"] + label::before,
+.box [class*="icheck-"] > input[type="radio"]:first-child + label::before {
+	border-radius: calc(var(--gap) * .75);
+}
+
+.box [class*="icheck-"] > input[type="radio"]:first-child + input[type="hidden"] + label::after,
+.box [class*="icheck-"] > input[type="radio"]:first-child + label::after {
+	border-radius: calc(var(--gap) * .75);
+	width: calc(var(--gap) * 2.5);
+	background-color: var(--color-supplement02);
+}
+
+.box [class*="icheck-"] > input[type="radio"]:first-child:checked + input[type="hidden"] + label::after,
+.box [class*="icheck-"] > input[type="radio"]:first-child:checked + label::after {
+	left: calc(var(--gap) / 4);
+	background-color: var(--color-primary);
+}
+
+/* -- columns size correction to fit in one line (Settings/DNS) */
+#dns .col-md-11 {
+	width: 75%;
+	margin-left: calc(var(--gap) * 2);
+}
+
 /*TODO: Not yet refactored ... */
 /*** MEDIA QUERIES ***/
 
@@ -2639,11 +2715,6 @@ td.highlight {
 .small-box.bg-red.no-user-select {
 	animation: loadingBlink 3s ease-in-out 900ms forwards;
 	opacity: 0;
-}
-
-/*** size correction to fit in one line - Settings/DNS ***/
-#dns .col-md-11 {
-	width: 84%;
 }
 
 

@@ -32,6 +32,10 @@ sudo git reset --hard
 ```
 
 ## Changelog
+**1.1.0**
+- FIX - input height in TOOLS --> Query lists
+- NEW - lcars-ish checkboxes and radios
+
 **1.0.1**
 - fix for small black box in the top bar on smaller screens
 - polishing of the 2(3) buttons in the right top corner
