@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.0.1
+	- Version:  1.1.1
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -176,6 +176,7 @@ td a {
 code,
 pre {
 	padding: var(--gap) var(--gap);
+	margin-top: calc(var(--gap) / 2);
 	line-height: 1.5;
 	font-size: 1.4rem;
 	color: var(--color-success);
@@ -1055,7 +1056,7 @@ p.login-box-msg,
 		top: 1.2rem;
 		background: var(--color-background);
 		width: 5.4rem;
-		right: 70.1rem;	
+		right: 70.1rem;
 	}
 }
 
@@ -1142,8 +1143,7 @@ p.login-box-msg,
 
 @media (min-width: 768px) {
 	.sidebar-mini.sidebar-collapse .sidebar-menu > li > a {
-		padding-left: calc(var(--gap) / 2);
-		padding-right: calc(var(--gap) / 2);
+		padding: var(--gap) calc(var(--gap) / 2);
 		display: flex;
 		justify-content: center;
 	}
@@ -1468,6 +1468,7 @@ ul.treeview-menu {
 .main-footer > .version-info {
 	background-color: var(--color-primary);
 	height: calc(var(--gap) * 2.25);
+	margin-top: calc(var(--gap) * 2);
 	position: relative;
 	display: flex;
 	align-items: flex-end;
@@ -1503,6 +1504,26 @@ ul.treeview-menu {
 	display: flex;
 	align-items: center;
 	font-size: 1.6rem;
+}
+
+/* -- update notification */
+.main-footer > .version-info .lookatme {
+	position: absolute;
+	left: calc(var(--gap) * .35);
+	top: calc((var(--gap) * .75) * -1);
+	font-size: 1rem;
+	white-space: nowrap;
+}
+
+.main-footer > .version-info li {
+	position: relative;
+}
+
+.main-footer > .version-info p {
+	position: absolute;
+	top: calc((var(--gap) * 2.75) * -1);
+	right: calc(var(--gap) * .35);
+	margin-bottom: 0;
 }
 
 /* -- donate bar */

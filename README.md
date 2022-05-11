@@ -32,6 +32,11 @@ sudo git reset --hard
 ```
 
 ## Changelog
+**1.1.1**
+- FIX - footer with UPDATE AVAILABLE text is no longer broken
+- FIX - spacing of `pre` in messages section
+- NEW - minimized sidebar has a centered icons now (thx for a feedback [AuthorShin](https://github.com/AuthorShin))
+
 **1.1.0**
 - FIX - input height in TOOLS --> Query lists
 - NEW - lcars-ish checkboxes and radios
