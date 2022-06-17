@@ -1203,6 +1203,44 @@ p.login-box-msg,
 	transform: scaleX(-1);
 }
 
+/* -- counters */
+.treeview .warning-count {
+	background-color: var(--color-background);
+	margin: 0;
+	line-height: inherit;
+	left: calc(var(--gap) / 4);
+	top: calc((var(--gap) / 4) * -1);
+	right: auto;
+	border-radius: 0;
+}
+
+.treeview .warning-count.pull-right-container {
+	transform: none;
+	left: auto;
+	right: 24px;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidebar-collapse .treeview .warning-count.pull-right-container {
+	right: 0;
+	top: calc((var(--gap) / 4) * -1);
+	bottom: auto;
+}
+
+#top-warning-count {
+	top: var(--gap);
+	left: auto;
+	right: calc(var(--gap) * -1);
+	bottom: calc(var(--gap) - 2px); /* visual compensation */
+	display: flex;
+	align-items: center;
+	border-radius: 0;
+}
+
 
 /* SUBMENUS
    ========================================================== */

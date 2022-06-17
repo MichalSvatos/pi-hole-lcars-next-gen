@@ -32,6 +32,10 @@ sudo git reset --hard
 ```
 
 ## Changelog
+**1.1.2**
+- NEW - Visual change of the counter next to the hamburger menu icon
+- FIX - Counter in the sidebar (expanded and collapsed) is no longer flipped horizontaly and it's visualization is in style of the rest of the design
+
 **1.1.1**
 - FIX - footer with UPDATE AVAILABLE text is no longer broken
 - FIX - spacing of `pre` in messages section
