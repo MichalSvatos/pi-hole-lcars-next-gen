@@ -255,7 +255,7 @@ th {
 .btn-default {
 	background-color: var(--color-disabled);
 	border: none;
-	color: #000;
+	color: var(--color-text-dark);
 }
 
 .btn-primary,
@@ -322,7 +322,7 @@ th {
 
 .toggle-off.btn-sm {
 	background-color: var(--color-disabled);
-	color: #000;
+	color: var(--color-text-dark);
 }
 
 .toggle-on,
@@ -348,12 +348,12 @@ th {
 
 .allowed-row .btn-default.text-red {
 	background-color: var(--color-danger);
-	color: #000 !important;
+	color: var(--color-text-dark) !important;
 }
 
 .blocked-row .btn-default.text-green {
 	background-color: var(--color-success);
-	color: #000 !important;
+	color: var(--color-text-dark) !important;
 }
 
 .allowed-row .btn-default.text-red:hover {
@@ -377,11 +377,11 @@ th {
 .btn-default:active,
 .btn-default.hover {
 	background-color: var(--color-quaternary);
-	color: #000;
+	color: var(--color-text-dark);
 }
 
 .btn-primary:hover {
-	color: #000;
+	color: var(--color-text-dark);
 }
 
 .btn-primary.focus,
@@ -389,7 +389,7 @@ th {
 .btn-primary.active.focus,
 .btn-primary:active:focus {
 	background-color: var(--color-quaternary);
-	color: #000;
+	color: var(--color-background);
 }
 
 #gravityBtn {
@@ -439,7 +439,7 @@ select.form-control,
 .daterangepicker select.ampmselect,
 .form-control:not(.btn),
 div.dataTables_wrapper div.dataTables_length select {
-	background: #000;
+	background: var(--color-background);
 	border: 2px solid var(--color-disabled);
 	color: #fff;
 	border-radius: 8px;
@@ -588,7 +588,6 @@ p.login-box-msg,
 	}
 }
 
-
 #loginform .has-error + .row .btn {
 	background: #d43;
 }
@@ -606,11 +605,11 @@ p.login-box-msg,
 	border-radius: 8px 0 0 8px;
 	border-right: none;
 	background: #678;
-	color: #000;
+	color: var(--color-text-dark);
 }
 
 .select2 .select2-selection {
-	background-color: #000;
+	background-color: var(--color-background);
 	color: #9ab;
 	border: 2px solid #567;
 	border-radius: 8px;
@@ -625,12 +624,12 @@ p.login-box-msg,
 
 .select2-dropdown {
 	background-color: #9ab;
-	color: #000;
+	color: var(--color-text-dark);
 	border: none;
 }
 
 .select2-dropdown .select2-search__field {
-	background-color: #000;
+	background-color: var(--color-background);
 	color: #fff;
 	border: none !important;
 	border-radius: 8px;
@@ -647,7 +646,7 @@ p.login-box-msg,
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
 	background-color: rgba(255, 255, 255, 0.4);
-	color: #000;
+	color: var(--color-text-dark);
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
@@ -680,8 +679,18 @@ p.login-box-msg,
 	text-transform: uppercase;
 }
 
+@media (max-width: 767px) {
+	.main-header {
+		background-image: linear-gradient(to right, var(--color-background) 4px, var(--color-quaternary) 4px);
+		background-size: 100% 100%;
+		background-position: 300px 0;
+		background-repeat: no-repeat;
+		border-radius: 0;
+	}
+}
+
 .main-header .logo {
-	color: #000;
+	color: var(--color-text-dark);
 	text-align: right;
 	font-family: var(--font-family);
 	font-size: 2.5rem;
@@ -715,7 +724,7 @@ p.login-box-msg,
    ========================================================== */
 
 .main-header .navbar {
-	background-image: linear-gradient(#000 36px, transparent 36px);
+	background-image: linear-gradient(var(--color-background) 36px, transparent 36px);
 }
 
 @media (min-width: 992px) {
@@ -767,7 +776,7 @@ p.login-box-msg,
 	display: block;
 	width: 100%;
 	height: 25px;
-	background: #000;
+	background: var(--color-background);
 	border-radius: 0 0 0 25px;
 	position: absolute;
 	bottom: -10px;
@@ -778,7 +787,7 @@ p.login-box-msg,
 	margin: 5px 0;
 	padding: 0;
 	overflow: hidden;
-	color: #000;
+	color: var(--color-text-dark);
 	background: #9ab;
 	border: 3px solid #fff;
 	border-radius: 8px;
@@ -790,7 +799,7 @@ p.login-box-msg,
 }
 
 .main-header li.user-header {
-	background-color: #000;
+	background-color: var(--color-background);
 }
 
 .navbar-nav > .user-menu > .dropdown-menu > .user-body {
@@ -799,7 +808,7 @@ p.login-box-msg,
 
 .navbar .nav > li > a,
 .navbar .nav > li > .navbar-text {
-	color: #000;
+	color: var(--color-text-dark);
 	padding: 0;
 	margin: 0;
 	font-size: 1.4rem;
@@ -881,7 +890,7 @@ p.login-box-msg,
 }
 
 #pihole-diagnosis a {
-	color: #000;
+	color: var(--color-text-dark);
 	position: static;
 }
 
@@ -902,8 +911,8 @@ p.login-box-msg,
 	font-size: 1.2rem;
 	text-align: right;
 	padding: calc(var(--gap) / 2);
-	color: #000 !important;
-	border-right: calc(var(--gap) / 4) solid #000;
+	color: var(--color-text-dark) !important;
+	border-right: calc(var(--gap) / 4) solid var(--color-background);
 	line-height: calc(var(--gap) * 2);
 	border-radius: calc(var(--gap) * 1.5) 0 0 calc(var(--gap) * 1.5);
 	z-index: 1;
@@ -1024,12 +1033,12 @@ p.login-box-msg,
 
 
 .content-wrapper {
-	background-image: linear-gradient(to right, #000 4px, var(--color-primary) 4px),
+	background-image: linear-gradient(to right, var(--color-background) 4px, var(--color-primary) 4px),
 	linear-gradient(
 			to right,
 			var(--color-primary-hover) var(--gradient-pos),
-			#000 var(--gradient-pos),
-			#000 calc(4px + var(--gradient-pos)),
+			var(--color-background) var(--gradient-pos),
+			var(--color-background) calc(4px + var(--gradient-pos)),
 			transparent
 	);
 	background-size: 100% 50px, var(--gradient-pos) 50px;
@@ -1062,7 +1071,7 @@ p.login-box-msg,
 
 .content {
 	margin-top: 20px;
-	background: #000;
+	background: var(--color-background);
 	padding: 20px 0 20px 20px;
 	border-radius: 25px 0 0;
 	overflow: hidden;
@@ -1089,12 +1098,12 @@ p.login-box-msg,
 	background-image: linear-gradient(
 			to top,
 			var(--color-primary) 200px,
-			#000 200px,
-			#000 204px,
+			var(--color-background) 200px,
+			var(--color-background) 204px,
 			var(--color-primary-hover) 204px,
 			var(--color-primary-hover) 270px,
-			#000 270px,
-			#000 274px,
+			var(--color-background) 270px,
+			var(--color-background) 274px,
 			transparent 274px
 	);
 	background-repeat: no-repeat;
@@ -1111,13 +1120,13 @@ p.login-box-msg,
 
 .sidebar {
 	padding: 0 0 calc(var(--gap) / 4) 0;
-	background: #000;
+	background: var(--color-background);
 	font-weight: var(--font-bold);
 	text-transform: uppercase;
 }
 
 .sidebar a {
-	color: #000;
+	color: var(--color-text-dark);
 }
 
 .sidebar-menu {
@@ -1253,7 +1262,7 @@ ul.treeview-menu {
 	padding: calc(var(--gap) * .75) var(--gap) calc(var(--gap) * .75) calc(var(--gap) * 3);
 	position: relative;
 	overflow: hidden;
-	color: #000;
+	color: var(--color-text-dark);
 	background-color: var(--color-primary);
 	border-radius: 0 calc(var(--gap) * 1.5) calc(var(--gap) * 1.5) 0;
 	text-align: left;
@@ -1265,7 +1274,7 @@ ul.treeview-menu {
 	position: absolute;
 	left: 0;
 	height: 100%;
-	background-color: #000;
+	background-color: var(--color-background);
 	width: calc(var(--gap) * 2.5);
 	top: 0;
 	border-left: calc(var(--gap) / 2) solid var(--color-disabled);
@@ -1329,7 +1338,7 @@ ul.treeview-menu {
 	top: 0;
 	bottom: 0;
 	border-radius: 0 calc(var(--gap) * 1.5) calc(var(--gap) * 1.5) 0;
-	box-shadow: 0 0 0 calc(var(--gap) / 4) #000;
+	box-shadow: 0 0 0 calc(var(--gap) / 4) var(--color-background);
 }
 
 .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu > li:hover > a > span:before {
@@ -1353,7 +1362,7 @@ ul.treeview-menu {
 	display: block !important;
 	top: 100%;
 	border-radius: 0 0 calc(var(--gap) / 4) 0;
-	background-color: #000;
+	background-color: var(--color-background);
 	overflow: hidden;
 	z-index: -1;
 }
@@ -1416,7 +1425,7 @@ ul.treeview-menu {
 	width: 1.3rem;
 	height: 1.2rem;
 	background-color: var(--color-success);
-	border: calc(var(--gap) / 4) solid #000;
+	border: calc(var(--gap) / 4) solid var(--color-background);
 	border-right: 0;
 	z-index: 20;
 
@@ -1430,7 +1439,7 @@ ul.treeview-menu {
 
 .user-panel > .info,
 .user-panel > .info > a {
-	color: #000;
+	color: var(--color-text-dark);
 	left: auto;
 	z-index: -2;
 }
@@ -1467,7 +1476,7 @@ ul.treeview-menu {
 }
 
 .user-panel .fa-circle path {
-	stroke: #000;
+	stroke: var(--color-background);
 	stroke-width: 20%;
 }
 
@@ -1494,13 +1503,25 @@ ul.treeview-menu {
    ========================================================== */
 
 .main-footer {
-	background-color: #000;
+	background-color: var(--color-background);
 	border: 0;
+}
+
+@media (max-width: 767px) {
+	.main-footer {
+		margin-left: 0;
+	}
 }
 
 .main-footer > div:first-child {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+@media (min-width: 768px) {
+	.main-footer > div:first-child {
+		margin: calc(var(--gap) * 2) 0 var(--gap) var(--gap);
+	}
 }
 
 .main-footer > .version-info {
@@ -1517,7 +1538,7 @@ ul.treeview-menu {
 	content: '';
 	width: 100%;
 	height: calc(var(--gap) * 2);
-	background-color: #000;
+	background-color: var(--color-background);
 	border-radius: 0 0 0 calc(var(--gap) * 1.5);
 	position: absolute;
 	top: 0;
@@ -1536,8 +1557,8 @@ ul.treeview-menu {
 .main-footer > .version-info ul {
 	margin-bottom: 0;
 	text-transform: uppercase;
-	color: var(--color-primary);
-	background-color: black;
+	color: var(--color-text-dark);
+	background-color: var(--color-background);
 	height: var(--gap);
 	display: flex;
 	align-items: center;
@@ -1579,7 +1600,7 @@ ul.treeview-menu {
 .main-footer > div:first-child > div {
 	padding: 0 calc(var(--gap) / 2);
 	width: auto;
-	background: #000;
+	background: var(--color-background);
 	text-transform: uppercase;
 	color: var(--color-danger);
 	line-height: 1;
@@ -1696,7 +1717,7 @@ table.table-bordered.dataTable td {
 
 .box-footer {
 	border-radius: 0;
-	border-top: 4px solid #000;
+	border-top: 4px solid var(--color-background);
 	padding: 10px;
 	background-color: transparent;
 }
@@ -1719,7 +1740,7 @@ table.table-bordered.dataTable td {
 #query-types-pie,
 #forward-destinations-pie {
 	border: 15px solid var(--color-disabled);
-	background-color: #000;
+	background-color: var(--color-background);
 	position: relative;
 	margin-top: calc(var(--gap) / 2);
 	background-image: var(--background-grid);
@@ -1736,8 +1757,8 @@ table.table-bordered.dataTable td {
 	position: absolute;
 	height: 90%;
 	top: 50%;
-	border-top: calc(var(--gap) / 4) solid #000;
-	border-bottom: calc(var(--gap) / 4) solid #000;
+	border-top: calc(var(--gap) / 4) solid var(--color-background);
+	border-bottom: calc(var(--gap) / 4) solid var(--color-background);
 }
 
 #query-types-pie:before,
@@ -1746,7 +1767,7 @@ table.table-bordered.dataTable td {
 	left: 0;
 	background: var(--color-danger);
 	transform: translateX(-100%) translateY(-50%);
-	border-left: calc(var(--gap) / 4) solid #000;
+	border-left: calc(var(--gap) / 4) solid var(--color-background);
 }
 
 #query-types-pie:after,
@@ -1908,7 +1929,7 @@ table.table-bordered.dataTable td {
 	background: var(--color-primary);
 	height: 4.4rem; /* -- same as .box-header */
 	display: block;
-	border-top: calc(var(--gap) / 4) solid #000;
+	border-top: calc(var(--gap) / 4) solid var(--color-background);
 }
 
 /* -- fake inner round corners (for the left bars) */
@@ -2190,7 +2211,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 	padding: 3px 4px 4px;
 	min-width: calc(var(--gap) * 2);
 	background: var(--color-tertiary);
-	color: #000;
+	color: var(--color-text-dark);
 	text-align: center;
 	border: none;
 }
@@ -2204,7 +2225,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 .pagination > li > a:hover,
 .pagination > li > span:focus,
 .pagination > li > span:hover {
-	color: #000;
+	color: var(--color-text-dark);
 	background-color: #fff;
 }
 
@@ -2215,7 +2236,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 .pagination > .disabled > span:focus,
 .pagination > .disabled > span:hover {
 	background-color: var(--color-disabled);
-	color: #000;
+	color: var(--color-text-dark);
 	cursor: unset;
 }
 
@@ -2225,7 +2246,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 .pagination > .active > span,
 .pagination > .active > span:focus,
 .pagination > .active > span:hover {
-	color: #000;
+	color: var(--color-text-dark);
 	background-color: var(--color-quaternary);
 }
 
@@ -2297,7 +2318,7 @@ table.dataTable {
 .alert {
 	animation: loadingBlink 1.5s ease-in-out forwards;
 	transition: all ease-in-out 1s;
-	color: #000 !important;
+	color: var(--color-background) !important;
 	display: flex !important;
 	flex-wrap: wrap;
 	border: calc(var(--gap) / 4) solid var(--color-background);
@@ -2444,22 +2465,6 @@ table.dataTable {
 		padding: 0;
 	}
 
-	.main-header {
-		background-image: linear-gradient(to right, #000 4px, #8bf 4px);
-		background-size: 100% 100%;
-		background-position: 300px 0;
-		background-repeat: no-repeat;
-		border-radius: 0;
-	}
-
-	.main-header .navbar .dropdown-menu li.divider {
-		background-color: rgba(255, 255, 255, 0.1);
-	}
-
-	.main-header .navbar .dropdown-menu li a {
-		color: #fff;
-	}
-
 	.main-sidebar {
 		width: var(--sidebar-width);
 		padding: 79px 0 0;
@@ -2496,10 +2501,6 @@ table.dataTable {
 		min-width: 350px;
 	}
 
-	.main-footer {
-		margin-left: 0;
-	}
-
 	.form-group.has-error.login-box-msg::before,
 	.form-group.has-error.login-box-msg::after {
 		font-size: calc((100vw - 60px) / 6);
@@ -2507,12 +2508,6 @@ table.dataTable {
 }
 
 /*--- Media - min-width ---*/
-@media (min-width: 768px) {
-	.main-footer > div:first-child {
-		margin: 35px 0 18px 15px;
-	}
-}
-
 @media (min-width: 1960px) {
 	.layout-boxed .wrapper {
 		box-shadow: none;
@@ -2584,7 +2579,7 @@ table.dataTable {
 .daterangepicker select.secondselect,
 .daterangepicker select.ampmselect {
 	background-color: #678;
-	color: #000;
+	color: var(--color-text-dark);
 	border: none;
 }
 
@@ -2665,7 +2660,7 @@ input[type="password"]::-webkit-caps-lock-indicator {
 
 /*--- Used in the Query Log table ---*/
 .text-black {
-	color: #000 !important;
+	color: var(--color-background) !important;
 }
 
 .text-green-light {
@@ -2742,7 +2737,7 @@ td.highlight {
 
 /*** small-box ***/
 .small-box {
-	color: #000 !important;
+	color: var(--color-background) !important;
 }
 
 .small-box p {
@@ -2803,7 +2798,7 @@ td.highlight {
 		background-color: var(--pulse-color);
 	}
 	100% {
-		background-color: #000;
+		background-color: var(--color-background);
 	}
 }
 
@@ -2812,7 +2807,7 @@ td.highlight {
 		background-color: var(--pulse-color);
 	}
 	100% {
-		background-color: #000;
+		background-color: var(--color-background);
 	}
 }
 
@@ -2860,7 +2855,7 @@ td.highlight {
 
 @-webkit-keyframes dangerFlash {
 	0%, 49%, 65%, 100% {
-		color: #000;
+		color: var(--color-text-dark);
 		background-color: var(--color-danger-bright);
 	}
 	50% {

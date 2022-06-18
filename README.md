@@ -32,6 +32,9 @@ sudo git reset --hard
 ```
 
 ## Changelog
+**1.1.3**
+- FIX - Small refactoring (mostly just color variables)
+
 **1.1.2**
 - NEW - Visual change of the counter next to the hamburger menu icon
 - FIX - Counter in the sidebar (expanded and collapsed) is no longer flipped horizontaly and it's visualization is in style of the rest of the design
