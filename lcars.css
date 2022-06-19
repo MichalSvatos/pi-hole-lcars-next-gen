@@ -1557,7 +1557,7 @@ ul.treeview-menu {
 .main-footer > .version-info ul {
 	margin-bottom: 0;
 	text-transform: uppercase;
-	color: var(--color-text-dark);
+	color: var(--color-primary);
 	background-color: var(--color-background);
 	height: var(--gap);
 	display: flex;
