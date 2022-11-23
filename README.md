@@ -1,4 +1,11 @@
 # Pi-hole LCARS Next Generation Theme
+
+| I apologize that I'm behind updates, but life happened. I'll try to get back with some updates as soon as I can. |
+|:----------------------------------------------------------------------------------------------------------------:|
+|             If something is broken, please report it regardless by opening an issue. <br> Thank you              |
+
+***
+
 LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based on the original theme but heavily customized and refactored (still WIP).
 
 [![Dashboard](https://i.imgur.com/PXeXZx7.png)](https://imgur.com/PXeXZx7)
