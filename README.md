@@ -34,7 +34,7 @@ sudo git reset --hard
 ```
 
 ## Docker installation
-Run the same command directly in the container as shown [here](https://github.com/MichalSvatos/pi-hole-lcars-next-gen/issues/1#issuecomment-1372378045)
+Run the same commands directly in the container as shown [here](https://github.com/MichalSvatos/pi-hole-lcars-next-gen/issues/1#issuecomment-1372378045).
 
 _Note: I didn't test it myself._
 
