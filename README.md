@@ -11,7 +11,6 @@ LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based o
 [![Adlist](https://i.imgur.com/uKqZMMG.png)](https://imgur.com/uKqZMMG)
 
 ### ℹ️ This theme replaces the original blue LCARS theme
-### ℹ️ Installation does not support Docker at this moment
 
 ## Installation
 Type the following commands into SSH, line by line.
@@ -34,7 +33,16 @@ cd /var/www/html/admin/style/themes/
 sudo git reset --hard
 ```
 
+## Docker installation
+Run the same command directly in the container as shown [here](https://github.com/MichalSvatos/pi-hole-lcars-next-gen/issues/1#issuecomment-1372378045)
+
+_Note: I didn't test it myself._
+
 ## Changelog
+**1.2.1**
+- FIX - drowp down menu links
+- UPDATE - Docker installation - thanks to [Griffen8280](https://github.com/Griffen8280)
+
 **1.2.0**
 - FIX - "HOSTNAME" word hidden
 - FIX - collapsed sidebar after new update
