@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.1.1
+	- Version:  1.2.0
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -718,6 +718,11 @@ p.login-box-msg,
 		margin: 0;
 		font-size: inherit;
 	}
+
+	.sidebar-mini.sidebar-collapse .main-header .navbar {
+		--sidebar-width: 50px;
+		margin-left: var(--sidebar-width);
+	}
 }
 
 /* NAVBAR
@@ -814,7 +819,7 @@ p.login-box-msg,
 	font-size: 1.4rem;
 }
 
-.navbar .nav > li span.hidden-sm {
+.navbar .nav > li span.hidden-xs {
 	display: none;
 }
 
@@ -1175,18 +1180,13 @@ p.login-box-msg,
 	order: 9;
 }
 
-/* -- logout */
-.sidebar-menu > li:nth-last-child(3) > a {
-	background-color: var(--color-danger);
+/* -- donate */
+.sidebar-menu > li.menu-donate > a {
+	background-color: var(--color-quinternary);
 }
 
-.sidebar-menu > li:nth-last-child(3):hover > a {
-	background-color: var(--color-danger-bright);
-	animation: dangerFlash 2s ease-in-out infinite;
-}
-
-.sidebar-menu > li:nth-last-child(3) {
-	order: 10;
+.sidebar-menu > li.menu-donate:hover > a {
+	background-color: var(--color-success);
 }
 
 .sidebar-menu > li:hover > a,
@@ -2452,6 +2452,65 @@ table.dataTable {
 	margin-left: calc(var(--gap) * 2);
 }
 
+/* STATS BOXES (4 colored boxes on the dashboard homepage)
+   ========================================================== */
+.small-box {
+	color: var(--color-background) !important;
+}
+
+.small-box p {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	font-weight: var(--font-bold);
+}
+
+.small-box .icon,
+.select2-selection__clear {
+	font-family: sans-serif;
+}
+
+.small-box.bg-green.no-user-select {
+	animation: loadingBlink 3s ease-in-out forwards;
+	opacity: 0;
+}
+
+.small-box.bg-aqua.no-user-select {
+	animation: loadingBlink 3s ease-in-out 300ms forwards;
+	opacity: 0;
+}
+
+.small-box.bg-yellow.no-user-select {
+	animation: loadingBlink 3s ease-in-out 600ms forwards;
+	opacity: 0;
+}
+
+.small-box.bg-red.no-user-select {
+	animation: loadingBlink 3s ease-in-out 900ms forwards;
+	opacity: 0;
+}
+
+.small-box > .small-box-footer {
+	color: var(--color-text-dark);
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	font-weight: var(--font-bold);
+	letter-spacing: .05rem;
+	border-top: calc(var(--gap) / 4) solid black;
+	background: var(--color-disabled);
+	position: static;
+}
+
+.small-box > .small-box-footer:hover {
+	color: var(--color-text-dark);
+}
+
+/* -- make the whole area clickable */
+.small-box > .small-box-footer:after {
+	content: '';
+	position: absolute;
+	inset: 0;
+}
+
 /*TODO: Not yet refactored ... */
 /*** MEDIA QUERIES ***/
 
@@ -2733,42 +2792,6 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 
 td.highlight {
 	background-color: rgba(255, 204, 0, 0.15);
-}
-
-/*** small-box ***/
-.small-box {
-	color: var(--color-background) !important;
-}
-
-.small-box p {
-	font-size: 1.4rem;
-	text-transform: uppercase;
-	font-weight: var(--font-bold);
-}
-
-.small-box .icon,
-.select2-selection__clear {
-	font-family: sans-serif;
-}
-
-.small-box.bg-green.no-user-select {
-	animation: loadingBlink 3s ease-in-out forwards;
-	opacity: 0;
-}
-
-.small-box.bg-aqua.no-user-select {
-	animation: loadingBlink 3s ease-in-out 300ms forwards;
-	opacity: 0;
-}
-
-.small-box.bg-yellow.no-user-select {
-	animation: loadingBlink 3s ease-in-out 600ms forwards;
-	opacity: 0;
-}
-
-.small-box.bg-red.no-user-select {
-	animation: loadingBlink 3s ease-in-out 900ms forwards;
-	opacity: 0;
 }
 
 

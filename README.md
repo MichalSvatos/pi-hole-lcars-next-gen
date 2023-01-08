@@ -1,9 +1,5 @@
 # Pi-hole LCARS Next Generation Theme
 
-| I apologize that I'm behind updates, but life happened. I'll try to get back with some updates as soon as I can. |
-|:----------------------------------------------------------------------------------------------------------------:|
-|             If something is broken, please report it regardless by opening an issue. <br> Thank you              |
-
 ***
 
 LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based on the original theme but heavily customized and refactored (still WIP).
@@ -39,6 +35,12 @@ sudo git reset --hard
 ```
 
 ## Changelog
+**1.2.0**
+- FIX - "HOSTNAME" word hidden
+- FIX - collapsed sidebar after new update
+- FIX - styling for the new links in the stats boxes
+- NEW - whole stats boxes area is clickable
+
 **1.1.4**
 - FIX - footer text color (over-refactoring :) )
 
