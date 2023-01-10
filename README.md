@@ -39,8 +39,11 @@ Run the same commands directly in the container as shown [here](https://github.c
 _Note: I didn't test it myself._
 
 ## Changelog
+**1.3.0**
+- NEW - Redesigned login screen
+
 **1.2.1**
-- FIX - drowp down menu links
+- FIX - drop down menu links
 - UPDATE - Docker installation - thanks to [Griffen8280](https://github.com/Griffen8280)
 
 **1.2.0**

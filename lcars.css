@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.2.1
+	- Version:  1.3.0
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -242,8 +242,6 @@ th {
 .btn-success,
 .btn-warning,
 .btn-danger,
-#loginform .btn-primary,
-#loginform .btn-box-tool,
 .nav-tabs-custom > .nav-tabs > li > a {
 	padding: var(--gap) var(--gap) calc(var(--gap) / 2) var(--gap);
 	border-radius: calc(var(--gap) * 1.5);
@@ -258,8 +256,7 @@ th {
 	color: var(--color-text-dark);
 }
 
-.btn-primary,
-#loginform .btn-primary {
+.btn-primary {
 	background-color: var(--color-primary);
 	border: none;
 	color: var(--color-text-dark);
@@ -269,8 +266,7 @@ th {
 
 .btn-primary:hover,
 .btn-primary:active,
-.btn-primary.hover,
-#loginform .btn-primary:hover {
+.btn-primary.hover {
 	background-color: var(--color-primary-hover);
 }
 
@@ -283,13 +279,11 @@ th {
 	color: #000;
 }
 
-.btn-danger,
-#loginform .btn-box-tool {
+.btn-danger {
 	background-color: var(--color-danger);
 }
 
-.btn-danger:hover,
-#loginform .btn-box-tool:hover {
+.btn-danger:hover {
 	background-color: var(--color-danger-bright);
 	color: #000;
 	animation: dangerFlash 2s ease-in-out infinite;
@@ -412,10 +406,6 @@ th {
 	background-color: #fff;
 }
 
-#loginform .btn-box-tool {
-	color: #fff;
-}
-
 #loginform .btn-primary {
 	height: auto;
 }
@@ -509,38 +499,50 @@ p.login-box-msg,
 /* LOGIN FORM
    ========================================================== */
 
-#loginform .box-info {
-	border-top: 0;
+.box.login-box {
+	background-color: var(--color-background);
+	padding: var(--gap) var(--gap);
+	margin-top: var(--gap);
+	margin-inline: var(--gap);
+	border-radius: 0;
+	max-width: calc(var(--gap) * 47);
+	width: 100%;
 }
 
-#loginform .box-header {
-	display: flex;
-	align-items: center;
+.box.login-box:has(.has-error)::before,
+.box.login-box:has(.has-error)::after {
+	background: var(--bar-top-danger);
 }
 
-#loginform .box-tools {
-	margin: 0;
+.box.login-box section {
+	margin-inline: auto;
+	max-width: calc(var(--gap) * 30);
+	width: 100%;
 }
 
-#loginform .box-title {
-	color: var(--color-danger);
-	flex-grow: 1;
+.box.login-box .btn-box-tool {
+	min-width: auto;
 }
 
-#loginform .box-info .box-body {
-	color: var(--color-danger-bright);
+.login-logo {
+	position: relative;
+	z-index: 0;
+}
+
+#loginform {
+	position: relative;
 }
 
 .form-group.has-error.login-box-msg::before,
 .form-group.has-error.login-box-msg::after {
 	content: "ACCESS DENIED";
-	margin: -20px -20px 20px;
-	padding: calc(45px + 0.7em) 0 0;
+	padding: calc(var(--gap) * 10) 0 0 0;
 	position: absolute;
-	inset: 0;
+	inset: 0 0 calc(var(--gap) * 9.375) 0;
 	font-size: 3.825em;
 	font-size: calc((100vw - var(--sidebar-width) - 60px) / 12);
 	line-height: 1;
+	pointer-events: none;
 }
 
 @media (max-width: 767px) {
@@ -569,11 +571,6 @@ p.login-box-msg,
 	z-index: 1;
 }
 
-.layout-boxed .form-group.has-error.login-box-msg::before,
-.layout-boxed .form-group.has-error.login-box-msg::after {
-	padding: calc(50% - 0.5em) 0 0;
-}
-
 @media (min-width: 1320px) {
 	.layout-boxed .form-group.has-error.login-box-msg::before,
 	.layout-boxed .form-group.has-error.login-box-msg::after {
@@ -588,17 +585,58 @@ p.login-box-msg,
 	}
 }
 
-#loginform .has-error + .row .btn {
-	background: #d43;
+@media (max-width: 420px) {
+	.login-footer {
+		flex-direction: column;
+		gap: var(--gap);
+		align-items: center;
+	}
 }
 
-#loginform .has-error + .row .btn:hover {
-	background: #d32;
+.login-footer a {
+	text-align: right;
 }
 
-#loginform .has-error + .row .btn:active,
-#loginform .has-error + .row .btn:focus {
-	background: #f00;
+@media (max-width: 420px) {
+	.login-footer a {
+		min-width: calc(var(--gap) * 8);
+	}
+}
+
+/* DONATE BOX (LOGIN)
+   ========================================================== */
+
+.login-donate {
+	background: var(--color-secondary-hover);
+	padding: var(--gap);
+	margin-top: var(--gap);
+	color: var(--color-text-dark);
+	text-transform: uppercase;
+	max-width: calc(var(--gap) * 47);
+	width: 100%;
+	margin-inline: auto;
+	border-radius: var(--gap);
+	position: relative;
+	transition: background-color var(--transition);
+}
+
+.login-donate:hover {
+	background-color: var(--color-success);
+}
+
+.login-donate a {
+	color: var(--color-danger);
+}
+
+.login-donate a::before {
+	content: 'Please ';
+}
+
+.login-donate a::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: transparent;
 }
 
 .input-group .input-group-addon {
@@ -1801,7 +1839,7 @@ table.table-bordered.dataTable td {
 #clients,
 #sysadmin .box,
 .box-warning,
-#loginform .box-info {
+.login-box {
 	background-color: var(--color-background);
 }
 
@@ -1814,7 +1852,8 @@ table.table-bordered.dataTable td {
 #clients:before,
 #sysadmin .box-warning:before,
 .box-warning:before,
-#loginform .box-info:before {
+.login-box:before,
+.login-box:after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1830,12 +1869,12 @@ table.table-bordered.dataTable td {
 	border-radius: 15px 8px 8px 0;
 }
 
-#domain-frequency:before {
+#domain-frequency:before,
+.login-box:before {
 	background: var(--bar-top-primary);
 }
 
-#ad-frequency:before,
-#loginform .box-info:before {
+#ad-frequency:before {
 	background: var(--bar-top-danger);
 }
 
@@ -1847,12 +1886,18 @@ table.table-bordered.dataTable td {
 	background: var(--bar-top-secondary)
 }
 
-#clients:before {
+#clients:before,
+.login-box:after {
 	background: var(--bar-top-primary-left);
 	border-radius: 0 8px 8px 15px;
 	top: auto;
 	bottom: 0;
 	transform: translateY(100%);
+}
+
+.login-box:after {
+	background: var(--bar-top-primary);
+	border-radius: 8px;
 }
 
 #sysadmin .box-warning:before {
