@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.3.0
+	- Version:  1.3.1
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -1618,7 +1618,7 @@ ul.treeview-menu {
 
 .main-footer > .version-info p {
 	position: absolute;
-	top: calc((var(--gap) * 2.75) * -1);
+	top: calc((var(--gap) * 3.5) * -1);
 	right: calc(var(--gap) * .35);
 	margin-bottom: 0;
 }

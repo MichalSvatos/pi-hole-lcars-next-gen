@@ -39,6 +39,9 @@ Run the same commands directly in the container as shown [here](https://github.c
 _Note: I didn't test it myself._
 
 ## Changelog
+**1.3.1**
+- FIX - position of the update info ("To install updates, run `pihole -up`")
+
 **1.3.0**
 - NEW - Redesigned login screen
 
