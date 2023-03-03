@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.3.1
+	- Version:  1.3.2
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -2572,6 +2572,20 @@ table.dataTable {
 	content: '';
 	position: absolute;
 	inset: 0;
+}
+
+
+/* FILTERS
+   ========================================================== */
+
+.filter_types div {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+
+.filter_types span {
+	width: auto;
 }
 
 /*TODO: Not yet refactored ... */
