@@ -2214,7 +2214,6 @@ table.dataTable thead .sorting_desc_disabled:after {
 #ad-frequency table td:last-child,
 #ad-frequency table th:last-child {
 	width: 130px !important;
-	width: auto;
 }
 
 #domain-frequency table td:first-child,
@@ -2390,10 +2389,16 @@ table.dataTable {
 	top: 0;
 }
 
+.alert h4 {
+	display: flex;
+	align-items: center;
+	margin-right: var(--gap);
+	margin-bottom: 0;
+}
+
 .alert svg.svg-inline--fa {
 	width: var(--gap);
 	height: var(--gap);
-	transform: translateY(.6rem);
 	margin-right: calc(var(--gap) / 2);
 }
 
@@ -2789,11 +2794,11 @@ input[type="password"]::-webkit-caps-lock-indicator {
 }
 
 .text-red {
-	color: var(--color-danger) !important;
+	color: var(--color-danger-bright) !important;
 }
 
 .text-vivid-blue {
-	color: #36f !important;
+	color: var(--color-quinternary) !important;
 }
 
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {
