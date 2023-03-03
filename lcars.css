@@ -21,6 +21,7 @@
 
 :root {
 	--sidebar-width: 230px;
+	--collapsed-width: 50px;
 	--gradient-pos: 300px;
 
 	/* -- gaps */
@@ -93,16 +94,6 @@
 	linear-gradient(var(--color-primary), var(--color-primary));
 
 	--background-grid: linear-gradient(var(--color-supplement02) .2rem, transparent .2rem), linear-gradient(90deg, var(--color-supplement02) .2rem, transparent .2rem);
-}
-
-.sidebar-collapse {
-	--sidebar-width: 50px;
-	--bar-wrapper: linear-gradient(to right, var(--color-primary-hover) calc(300px - var(--sidebar-width)), #000 calc(300px - var(--sidebar-width))), linear-gradient(to left, var(--color-primary) 359.5px, #000 359.5px, #000 363.5px, var(--color-primary-hover) 363.5px, var(--color-primary-hover) 700px, #000 700px, #000 704px, var(--color-secondary-hover) 704px, var(--color-secondary-hover), var(--color-secondary-hover) 754px, #000 754px),
-	linear-gradient(var(--color-primary), var(--color-primary));
-}
-
-.sidebar-open {
-	--gradient-pos: 70px;
 }
 
 
@@ -1067,13 +1058,15 @@ p.login-box-msg,
 	background: none;
 }
 
-/*** CONTENT ***/
+
+/* CONTENT
+   ========================================================== */
+
 .sidebar-mini.sidebar-collapse .content-wrapper,
 .sidebar-mini.sidebar-collapse .right-side,
 .sidebar-mini.sidebar-collapse .main-footer {
-	margin-left: 50px !important;
+	margin-left: var(--collapsed-width) !important;
 }
-
 
 .content-wrapper {
 	background-image: linear-gradient(to right, var(--color-background) 4px, var(--color-primary) 4px),
@@ -1428,6 +1421,52 @@ ul.treeview-menu {
 }
 
 
+/* SIDEBAR (COLLAPSED)
+   ========================================================== */
+
+.sidebar-collapse {
+	--sidebar-width: 230px;
+	--bar-wrapper: linear-gradient(to right, var(--color-primary-hover) calc(300px - var(--sidebar-width)), #000 calc(300px - var(--sidebar-width))), linear-gradient(to left, var(--color-primary) 359.5px, #000 359.5px, #000 363.5px, var(--color-primary-hover) 363.5px, var(--color-primary-hover) 700px, #000 700px, #000 704px, var(--color-secondary-hover) 704px, var(--color-secondary-hover), var(--color-secondary-hover) 754px, #000 754px),
+	linear-gradient(var(--color-primary), var(--color-primary));
+}
+
+@media (min-width: 768px) {
+	.sidebar-collapse {
+		--sidebar-width: var(--collapsed-width);
+	}
+}
+
+/* -- sidebar-collapse effect */
+.sidebar-collapse .content-wrapper {
+	padding-left: 0;
+	border-radius: 0;
+}
+
+.sidebar-collapse .wrapper::after {
+	width: var(--collapsed-width);
+}
+
+.sidebar-collapse .wrapper::before {
+	width: var(--collapsed-width);
+}
+
+.sidebar-collapse .sidebar-menu > li a {
+	box-shadow: none;
+}
+
+.sidebar-collapse .treeview-menu > li > a:hover {
+	background-color: var(--color-primary-hover);
+}
+
+.sidebar-collapse .sidebar-menu svg {
+	display: block;
+}
+
+.sidebar-open {
+	--gradient-pos: 70px;
+}
+
+
 /* USER PANEL
    ========================================================== */
 
@@ -1651,32 +1690,6 @@ ul.treeview-menu {
 
 .main-footer .fa-heart {
 	animation: pulseOpacity 1.5s ease-in-out 0s infinite;
-}
-
-/*** sidebar-collapse effect ***/
-.sidebar-collapse .content-wrapper {
-	padding-left: 0;
-	border-radius: 0;
-}
-
-.sidebar-collapse .wrapper::after {
-	width: 50px;
-}
-
-.sidebar-collapse .wrapper::before {
-	width: 50px;
-}
-
-.sidebar-collapse .sidebar-menu > li a {
-	box-shadow: none;
-}
-
-.sidebar-collapse .treeview-menu > li > a:hover {
-	background-color: var(--color-primary-hover);
-}
-
-.sidebar-collapse .sidebar-menu svg {
-	display: block;
 }
 
 /*** Page, panels, boxes, tables, etc. ***/
@@ -2561,10 +2574,6 @@ table.dataTable {
 
 /*--- Media - max-width ---*/
 @media (max-width: 767px) {
-	.sidebar-collapse {
-		--sidebar-width: 230px;
-	}
-
 	.wrapper {
 		padding: 0;
 	}
