@@ -2315,6 +2315,185 @@ td.highlight {
 	background-color: rgba(255, 204, 0, 0.15);
 }
 
+table.dataTable tbody > tr.selected,
+table.dataTable tbody > tr > .selected {
+	background-image: none;
+	background-color: var(--color-supplement02);
+}
+
+table.dataTable tbody td.select-checkbox,
+table.dataTable tbody th.select-checkbox {
+	min-width: var(--gap);
+}
+
+table.dataTable tbody .dropdown {
+	min-width: calc(var(--gap) * 9);
+}
+
+table.dataTable tbody .dropdown .btn-default {
+	background-color: var(--color-primary);
+	color: var(--color-text-dark);
+}
+
+table.dataTable tbody .dropdown .btn-default:hover,
+table.dataTable tbody .dropdown .btn-default:focus-within {
+	color: var(--color-text-dark);
+	background-color: var(--color-primary-hover);
+}
+
+table.dataTable .btn-xs {
+	padding: var(--gap) var(--gap) calc(var(--gap) / 2) var(--gap);
+	border-radius: calc(var(--gap) * 1.5);
+}
+
+/* --- "Checkbox" */
+table.dataTable tbody td.select-checkbox::before,
+table.dataTable tbody th.select-checkbox::before {
+	width: var(--gap);
+	height: var(--gap);
+	border-color: var(--color-quinternary);
+	border-width: calc(var(--gap) / 8);
+	border-radius: calc(var(--gap) * .25);
+	top: 50%;
+	cursor: pointer;
+}
+
+table.dataTable tr.selected td.select-checkbox::after,
+table.dataTable tr.selected th.select-checkbox::after {
+	border: 0;
+	width: calc(var(--gap) / 2);
+	height: calc(var(--gap) / 2);
+	background-color: var(--color-primary);
+	border-radius: calc(var(--gap) / 8);
+	margin: 0;
+	top: 50%;
+	transform: translate(-2px, -2px);
+}
+
+/* --- Dropdown menu */
+.open > .dropdown-menu {
+	overflow: visible !important;
+}
+
+.dropdown-menu.open {
+	background-color: var(--color-background);
+	min-width: calc(var(--gap) * 14);
+	padding: calc(var(--gap) * 1.5) var(--gap);
+	border: 15px solid var(--color-disabled);
+	border-radius: 8px;
+	box-shadow: 0 0 0 100vmax rgb(0 0 0 / 60%);
+}
+
+.dropdown-menu.open::before,
+.dropdown-menu.open::after {
+	display: block;
+	content: '';
+	position: absolute;
+	height: 90%;
+	top: 50%;
+	border-top: calc(var(--gap) / 4) solid var(--color-background);
+	border-bottom: calc(var(--gap) / 4) solid var(--color-background);
+}
+
+.dropdown-menu.open::before {
+	width: .9rem;
+	left: 0;
+	background: var(--color-danger);
+	transform: translateX(-100%) translateY(-50%);
+	border-left: calc(var(--gap) / 4) solid var(--color-background);
+}
+
+.dropdown-menu.open::after {
+	width: 1.5rem;
+	right: 0;
+	background: var(--color-secondary);
+	transform: translateX(100%) translateY(-50%);
+}
+
+.dropdown-menu.open .dropdown-menu.inner {
+	background-color: transparent;
+}
+
+.dropdown-menu.open .dropdown-menu li a {
+	padding: calc(var(--gap) / 2) var(--gap);
+	text-transform: uppercase;
+	position: relative;
+	border-left: calc(var(--gap) / 2) solid var(--color-background);
+}
+
+.dropdown-menu.open .dropdown-menu li a::before {
+	background-color: var(--color-primary);
+	width: calc(var(--gap) / 4);
+	height: 100%;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	translate: -200% 0;
+	opacity: 0;
+	transition: opacity var(--transition);
+}
+
+.dropdown-menu.open .dropdown-menu li a:hover {
+	background-color: transparent;
+	color: var(--color-link);
+}
+
+.dropdown-menu.open .dropdown-menu li a.selected {
+	border-radius: 0 calc(var(--gap) * 2) calc(var(--gap) * 2) 0;
+	background-color: var(--color-secondary);
+	color: #fff;
+}
+
+.dropdown-menu.open .dropdown-menu li a:hover::before,
+.dropdown-menu.open .dropdown-menu li a.selected::before {
+	opacity: 1;
+}
+
+.bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
+	top: calc(var(--gap) * .75);
+	right: 0;
+}
+
+.bs-actionsbox {
+	padding: 0;
+}
+
+.bs-actionsbox button.btn {
+	background-color: var(--color-quaternary);
+	color: var(--color-background);
+	font-weight: bold;
+}
+
+.bs-actionsbox button.btn:hover {
+	background-color: var(--color-quinternary);
+}
+
+.bs-actionsbox > button.btn[disabled] {
+	background-color: var(--color-disabled);
+	pointer-events: none;
+}
+
+.bs-actionsbox > button.btn-success {
+	background-color: var(--color-primary);
+}
+
+.bs-actionsbox > button.btn-success:hover {
+	background-color: var(--color-primary-hover);
+}
+
+.dropdown-menu.open .dropdown-menu li a span.text {
+	margin-right: 0;
+}
+
+.bs-actionsbox .btn-group {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: calc(var(--gap) / 4);
+	border-bottom: .2rem solid var(--color-supplement02);
+	padding-bottom: var(--gap);
+}
+
 /* PAGINATION
    ========================================================== */
 .pagination {
@@ -2636,189 +2815,6 @@ td.highlight {
 
 .filter_types span {
 	width: auto;
-}
-
-
-/* TABLES
-   ========================================================== */
-
-table.dataTable tbody > tr.selected,
-table.dataTable tbody > tr > .selected {
-	background-image: none;
-	background-color: var(--color-supplement02);
-}
-
-table.dataTable tbody td.select-checkbox,
-table.dataTable tbody th.select-checkbox {
-	min-width: var(--gap);
-}
-
-table.dataTable tbody .dropdown {
-	min-width: calc(var(--gap) * 9);
-}
-
-table.dataTable tbody .dropdown .btn-default {
-	background-color: var(--color-primary);
-	color: var(--color-text-dark);
-}
-
-table.dataTable tbody .dropdown .btn-default:hover,
-table.dataTable tbody .dropdown .btn-default:focus-within {
-	color: var(--color-text-dark);
-	background-color: var(--color-primary-hover);
-}
-
-table.dataTable .btn-xs {
-	padding: var(--gap) var(--gap) calc(var(--gap) / 2) var(--gap);
-	border-radius: calc(var(--gap) * 1.5);
-}
-
-/* --- "Checkbox" */
-table.dataTable tbody td.select-checkbox::before,
-table.dataTable tbody th.select-checkbox::before {
-	width: var(--gap);
-	height: var(--gap);
-	border-color: var(--color-quinternary);
-	border-width: calc(var(--gap) / 8);
-	border-radius: calc(var(--gap) * .25);
-	top: 50%;
-	cursor: pointer;
-}
-
-table.dataTable tr.selected td.select-checkbox::after,
-table.dataTable tr.selected th.select-checkbox::after {
-	border: 0;
-	width: calc(var(--gap) / 2);
-	height: calc(var(--gap) / 2);
-	background-color: var(--color-primary);
-	border-radius: calc(var(--gap) / 8);
-	margin: 0;
-	top: 50%;
-	transform: translate(-2px, -2px);
-}
-
-/* --- Dropdown menu */
-.open > .dropdown-menu {
-	overflow: visible !important;
-}
-
-.dropdown-menu.open {
-	background-color: var(--color-background);
-	min-width: calc(var(--gap) * 14);
-	padding: calc(var(--gap) * 1.5) var(--gap);
-	border: 15px solid var(--color-disabled);
-	border-radius: 8px;
-	box-shadow: 0 0 0 100vmax rgb(0 0 0 / 60%);
-}
-
-.dropdown-menu.open::before,
-.dropdown-menu.open::after {
-	display: block;
-	content: '';
-	position: absolute;
-	height: 90%;
-	top: 50%;
-	border-top: calc(var(--gap) / 4) solid var(--color-background);
-	border-bottom: calc(var(--gap) / 4) solid var(--color-background);
-}
-
-.dropdown-menu.open::before {
-	width: .9rem;
-	left: 0;
-	background: var(--color-danger);
-	transform: translateX(-100%) translateY(-50%);
-	border-left: calc(var(--gap) / 4) solid var(--color-background);
-}
-
-.dropdown-menu.open::after {
-	width: 1.5rem;
-	right: 0;
-	background: var(--color-secondary);
-	transform: translateX(100%) translateY(-50%);
-}
-
-.dropdown-menu.open .dropdown-menu.inner {
-	background-color: transparent;
-}
-
-.dropdown-menu.open .dropdown-menu li a {
-	padding: calc(var(--gap) / 2) var(--gap);
-	text-transform: uppercase;
-	position: relative;
-	border-left: calc(var(--gap) / 2) solid var(--color-background);
-}
-
-.dropdown-menu.open .dropdown-menu li a::before {
-	background-color: var(--color-primary);
-	width: calc(var(--gap) / 4);
-	height: 100%;
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	translate: -200% 0;
-	opacity: 0;
-	transition: opacity var(--transition);
-}
-
-.dropdown-menu.open .dropdown-menu li a:hover {
-	background-color: transparent;
-	color: var(--color-link);
-}
-
-.dropdown-menu.open .dropdown-menu li a.selected {
-	border-radius: 0 calc(var(--gap) * 2) calc(var(--gap) * 2) 0;
-	background-color: var(--color-secondary);
-	color: #fff;
-}
-
-.dropdown-menu.open .dropdown-menu li a:hover::before,
-.dropdown-menu.open .dropdown-menu li a.selected::before {
-	opacity: 1;
-}
-
-.bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
-	top: calc(var(--gap) * .75);
-	right: 0;
-}
-
-.bs-actionsbox {
-	padding: 0;
-}
-
-.bs-actionsbox button.btn {
-	background-color: var(--color-quaternary);
-	color: var(--color-background);
-	font-weight: bold;
-}
-
-.bs-actionsbox button.btn:hover {
-	background-color: var(--color-quinternary);
-}
-
-.bs-actionsbox > button.btn[disabled] {
-	background-color: var(--color-disabled);
-	pointer-events: none;
-}
-
-.bs-actionsbox > button.btn-success {
-	background-color: var(--color-primary);
-}
-
-.bs-actionsbox > button.btn-success:hover {
-	background-color: var(--color-primary-hover);
-}
-
-.dropdown-menu.open .dropdown-menu li a span.text {
-	margin-right: 0;
-}
-
-.bs-actionsbox .btn-group {
-	display: flex;
-	flex-wrap: nowrap;
-	gap: calc(var(--gap) / 4);
-	border-bottom: .2rem solid var(--color-supplement02);
-	padding-bottom: var(--gap);
 }
 
 
