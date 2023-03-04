@@ -39,6 +39,14 @@ Run the same commands directly in the container as shown [here](https://github.c
 _Note: I didn't test it myself._
 
 ## Changelog
+**1.4.0**
+- NEW - styling of the data tables - checkboxes, buttons, dropdown menus, background colors
+
+**1.3.2**
+- FIX - alerts icon and title align
+- FIX - filter in "DOMAINS" on one line
+- FIX - small refactoring
+
 **1.3.1**
 - FIX - position of the update info ("To install updates, run `pihole -up`")
 
