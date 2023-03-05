@@ -2817,6 +2817,9 @@ table.dataTable tr.selected th.select-checkbox::after {
 	width: auto;
 }
 
+.filter_types input:checked + label {
+	color: var(--color-quinternary);
+}
 
 /*TODO: Not yet refactored ... */
 /*** MEDIA QUERIES ***/
