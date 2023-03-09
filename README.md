@@ -39,6 +39,9 @@ Run the same commands directly in the container as shown [here](https://github.c
 _Note: I didn't test it myself._
 
 ## Changelog
+**1.5.0**
+- NEW - styling of the datepicker and calendar
+
 **1.4.0**
 - NEW - styling of the data tables - checkboxes, buttons, dropdown menus, background colors
 
