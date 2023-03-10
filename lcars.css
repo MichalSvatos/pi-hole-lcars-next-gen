@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.5.0
+	- Version:  1.5.1
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -3008,6 +3008,28 @@ table.dataTable tr.selected th.select-checkbox::after {
 	margin-left: calc(var(--gap) * -1);
 }
 
+.daterangepicker .prev.available,
+.daterangepicker .next.available {
+	background-color: var(--color-secondary);
+}
+
+.daterangepicker .prev.available span,
+.daterangepicker .next.available span {
+	padding: 0;
+	border: 6px solid transparent;
+	transform: rotate(0);
+}
+
+.daterangepicker .prev.available span {
+	border-right-color: var(--color-background);
+	translate: -3px 0;
+}
+
+.daterangepicker .next.available span {
+	border-left-color: var(--color-background);
+	translate: 3px 0;
+}
+
 /* --- hide panels on smaller screens */
 @media (max-width: 991px) {
 	.daterangepicker.show-ranges.ltr .drp-calendar.left:before,
@@ -3030,7 +3052,8 @@ table.dataTable tr.selected th.select-checkbox::after {
 		max-width: none;
 	}
 
-	.daterangepicker.show-ranges.ltr .drp-calendar.left {
+	.daterangepicker.show-ranges.ltr .drp-calendar.left,
+	.daterangepicker.show-ranges.ltr .drp-calendar.right {
 		padding-left: calc(var(--gap) * 4);
 	}
 
@@ -3152,9 +3175,9 @@ table.dataTable tr.selected th.select-checkbox::after {
 .daterangepicker select.monthselect,
 .daterangepicker select.hourselect,
 .daterangepicker select.minuteselect {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	padding: calc(var(--gap) / 4) calc(var(--gap) / 2);
-	min-width: calc(var(--gap) * 4);
+	min-width: calc(var(--gap) * 4.5);
 }
 
 .daterangepicker td {

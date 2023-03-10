@@ -39,6 +39,9 @@ Run the same commands directly in the container as shown [here](https://github.c
 _Note: I didn't test it myself._
 
 ## Changelog
+**1.5.1**
+- FIX - Calendar width, next/prev month arrow
+
 **1.5.0**
 - NEW - styling of the datepicker and calendar
 
