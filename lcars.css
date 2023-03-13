@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.5.2
+	- Version:  1.5.3
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -94,6 +94,8 @@
 	linear-gradient(var(--color-primary), var(--color-primary));
 
 	--background-grid: linear-gradient(var(--color-supplement02) .2rem, transparent .2rem), linear-gradient(90deg, var(--color-supplement02) .2rem, transparent .2rem);
+
+	--ufplogo: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAASFBMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////8FevL4AAAAGHRSTlMAEECfIHCvv49Q/zDvkGDfgG/PoH8fsF9btFCdAAADJElEQVR4Ae3UR3ZEqw6F4V9ClA6CIzDlMP+RvuC0HGvd2/fXVtitzc/+/PkjaDGeaS0Xdz+q8kxKQ7gNuxzRAewYfqZa13b6LAagcVyE20rEAqyMJbyznMWAGnHhlm4v+3dzgfFC6AXqrsCK0M6v+lqzAocb6OZZdzDA9gHkrlX5jScA5cqPzgJAOj8ziVkEjpOfpHAWsLJDlJ8UjWhw77xDlTcCeIUW0Q9+0L1NBZvGTxJApkGf6Z3vcpsAlwRgYo3SeGeQkA4gnnyjObQKOnklRhd4N7MDrljqSOULOTWiQEm+6QBkBTV18Agtwmc2bGzDJt8t+mpKEy6LIciczAc+k1hdhFZoxkdi58gOLDUVuCaCZgifGHscwzgT4ZUA9AbL6lUArQJ5YrOMjfLRaRlxAe8gxjMD6AaGtMc7pac1+gaPSDv5qDo+DaZALp5pNriePBNRQCsywabji49aVDGB4JkBZAME7uBjDQSIyX00PhAZ8SQFgmeJaB3z7FIbVmxrAghAwMWeIoQPej0jRoHBK22clS6SYJgoQDVgwHVEnPcd3km0HaEwHziTF73TlCwoaaA8sw0a4RnCBz56XQjXhhlwD1gXlt4v1CpI55k+IqzVh/NRjaFYUhe6ADDpJoDQ9dz6AEAXzkoqOiL5SGZEmUl3XjVTYIEoKC+ujd3JWSImn4jNiFDYCmCNCg1YB4DxxiZoRLjxidxLulNZhSbklLrIBi1TQHhTkjsunrKMT9Y0sECGGSDNoA0B2ln5FCAMdC6+2OHL44HqQAf6hWfSeSEVSmLhh8fkK5vxPyJ4hUwjE4AuvfDm3hGJ/5nGd+lzU8WmAtBdAPSg80qnWcWnL+E3XrHdkcob4Y1uI51fVT/WEWcXm5Uf3E0zO+Nc5fLEj9qOiFMv2CzGlwhycaO0a0S48hvR1jMU1r43XkgCcj8raGRPFX5nNeuOE7DrvGTnmaXPJcAZvrIaN6RHRDFPg3bdY7vPMU8VpHp/y3+bCTUi9pEG9j8geeyIqIjxz6i2XJddDMB8l5WpnX/HTPcUkOFqxr/Xx3AFSB9Due3Pnz//BawFHp2PubMEAAAAAElFTkSuQmCC);
 }
 
 
@@ -1746,7 +1748,7 @@ ul.treeview-menu {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAASFBMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////8FevL4AAAAGHRSTlMAEECfIHCvv49Q/zDvkGDfgG/PoH8fsF9btFCdAAADJElEQVR4Ae3UR3ZEqw6F4V9ClA6CIzDlMP+RvuC0HGvd2/fXVtitzc/+/PkjaDGeaS0Xdz+q8kxKQ7gNuxzRAewYfqZa13b6LAagcVyE20rEAqyMJbyznMWAGnHhlm4v+3dzgfFC6AXqrsCK0M6v+lqzAocb6OZZdzDA9gHkrlX5jScA5cqPzgJAOj8ziVkEjpOfpHAWsLJDlJ8UjWhw77xDlTcCeIUW0Q9+0L1NBZvGTxJApkGf6Z3vcpsAlwRgYo3SeGeQkA4gnnyjObQKOnklRhd4N7MDrljqSOULOTWiQEm+6QBkBTV18Agtwmc2bGzDJt8t+mpKEy6LIciczAc+k1hdhFZoxkdi58gOLDUVuCaCZgifGHscwzgT4ZUA9AbL6lUArQJ5YrOMjfLRaRlxAe8gxjMD6AaGtMc7pac1+gaPSDv5qDo+DaZALp5pNriePBNRQCsywabji49aVDGB4JkBZAME7uBjDQSIyX00PhAZ8SQFgmeJaB3z7FIbVmxrAghAwMWeIoQPej0jRoHBK22clS6SYJgoQDVgwHVEnPcd3km0HaEwHziTF73TlCwoaaA8sw0a4RnCBz56XQjXhhlwD1gXlt4v1CpI55k+IqzVh/NRjaFYUhe6ADDpJoDQ9dz6AEAXzkoqOiL5SGZEmUl3XjVTYIEoKC+ujd3JWSImn4jNiFDYCmCNCg1YB4DxxiZoRLjxidxLulNZhSbklLrIBi1TQHhTkjsunrKMT9Y0sECGGSDNoA0B2ln5FCAMdC6+2OHL44HqQAf6hWfSeSEVSmLhh8fkK5vxPyJ4hUwjE4AuvfDm3hGJ/5nGd+lzU8WmAtBdAPSg80qnWcWnL+E3XrHdkcob4Y1uI51fVT/WEWcXm5Uf3E0zO+Nc5fLEj9qOiFMv2CzGlwhycaO0a0S48hvR1jMU1r43XkgCcj8raGRPFX5nNeuOE7DrvGTnmaXPJcAZvrIaN6RHRDFPg3bdY7vPMU8VpHp/y3+bCTUi9pEG9j8geeyIqIjxz6i2XJddDMB8l5WpnX/HTPcUkOFqxr/Xx3AFSB9Due3Pnz//BawFHp2PubMEAAAAAElFTkSuQmCC);
+	background-image: var(--ufplogo);
 	background-size: contain;
 	background-repeat: no-repeat;
 	animation: loadingBlink 2s ease-in-out infinite alternate;
@@ -2129,7 +2131,7 @@ table.table-bordered.dataTable td {
 
 @media (min-width: 992px) {
 	.nav-tabs-custom > .nav-tabs > li > a {
-		min-width: calc(var(--gap) * 10);
+		min-width: calc(var(--gap) * 9);
 	}
 }
 
@@ -2648,16 +2650,6 @@ table.dataTable tr.selected th.select-checkbox::after {
 	padding-left: 2.8rem; /* --gap + (--gap / 2) + compensation for whitespace */
 }
 
-.no-danger-area {
-	box-shadow: none;
-	background: rgba(127, 127, 127, 0.05);
-}
-
-.danger-area {
-	box-shadow: none;
-	background: rgba(127, 127, 127, 0.05);
-}
-
 .box.box-warning {
 	border-top-color: #71480a;
 	position: relative;
@@ -2747,11 +2739,6 @@ table.dataTable tr.selected th.select-checkbox::after {
 	background-color: var(--color-primary);
 }
 
-/* -- columns size correction to fit in one line (Settings/DNS) */
-#dns .col-md-11 {
-	width: 75%;
-	margin-left: calc(var(--gap) * 2);
-}
 
 /* STATS BOXES (4 colored boxes on the dashboard homepage)
    ========================================================== */
@@ -2810,6 +2797,204 @@ table.dataTable tr.selected th.select-checkbox::after {
 	content: '';
 	position: absolute;
 	inset: 0;
+}
+
+
+/* "SETTINGS" SECTION TWEAKS, PANELS
+   ========================================================== */
+#sysadmin {
+	--sysadmin-border-left-width: calc(var(--gap) * 4);
+}
+
+/* --- system */
+#sysadmin tr {
+	background-color: transparent;
+}
+
+@media (max-width: 767px) {
+	#sysadmin tr {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+#sysadmin .col-lg-12 {
+	border-radius: var(--gap) var(--gap) calc(var(--gap) / 2) calc(var(--gap) / 2);
+	border-width: calc(var(--gap) / 8) calc(var(--gap) / 8) calc(var(--gap) / 8) var(--sysadmin-border-left-width);
+	border-color: var(--color-secondary);
+	border-style: solid;
+	padding: calc(var(--gap) * 2) var(--gap);
+}
+
+@media (min-width: 768px) {
+	#sysadmin {
+		--sysadmin-border-left-width: calc(var(--gap) * 6);
+	}
+
+	#sysadmin .col-lg-12 {
+		border-left-width: var(--sysadmin-border-left-width);
+	}
+}
+
+#sysadmin .col-lg-12:before,
+#sysadmin .col-lg-12:after {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+}
+
+#sysadmin .col-lg-12:before {
+	background-color: var(--color-background);
+	width: calc(var(--gap) * 2);
+	inset: 0 auto 0 0;
+	border-radius: calc(var(--gap) * .75);
+	translate: -50% 0;
+}
+
+#sysadmin .col-lg-12:after {
+	inset: calc(var(--gap) * 2) calc(var(--gap) / -4) 0 0;
+	border: calc(var(--gap) / 4) solid var(--color-background);
+}
+
+#sysadmin table {
+	position: relative;
+}
+
+#sysadmin table:before {
+	content: '';
+	position: absolute;
+	inset: 0 auto 0 calc((var(--sysadmin-border-left-width) + var(--gap)) * -1);
+	background: var(--color-tertiary) var(--ufplogo) no-repeat center var(--gap);
+	width: calc(var(--sysadmin-border-left-width) - var(--gap));
+	border-block: calc(var(--gap) / 4) solid var(--color-background);
+	background-size: calc(var(--gap) * 2);
+}
+
+@media (min-width: 768px) {
+	#sysadmin table:before {
+		background-size: calc(var(--gap) * 4);
+	}
+
+	#sysadmin table:after {
+		content: "dsng-by-ms";
+		position: absolute;
+		left: calc(var(--gap) * -5.25);
+		text-transform: uppercase;
+		color: var(--color-background);
+		font-size: 1.1rem;
+		bottom: calc(var(--gap) / 4);
+	}
+}
+
+/* --- dns */
+#dns td {
+	vertical-align: middle;
+	position: relative;
+	padding-top: var(--gap);
+}
+
+#dns td[title]:after,
+#dns td[title]:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 1.1rem;
+	opacity: 0;
+	transition: translate var(--transition), opacity var(--transition);
+}
+
+#dns td[title]:after {
+	content: attr(title);
+	left: calc(var(--gap) / 2);
+	color: var(--color-primary);
+	translate: 5px 0;
+}
+
+#dns td[title]:before {
+	width: calc(var(--gap) / 4);
+	height: var(--gap);
+	background-color: var(--color-secondary);
+	translate: 0 10px;
+}
+
+#dns td:hover:after,
+#dns td:hover:before {
+	opacity: 1;
+	translate: 0 0;
+}
+
+/* --- danger and safe panels */
+.no-danger-area,
+.danger-area {
+	box-shadow: none;
+	background-color: var(--color-background);
+	position: relative;
+	border: calc(var(--gap) * 1.25) solid;
+	border-radius: var(--gap);
+	padding: 0 var(--gap) var(--gap) var(--gap);
+}
+
+.no-danger-area:before,
+.danger-area:before,
+.no-danger-area:after,
+.danger-area:after {
+	content: '';
+	position: absolute;
+}
+
+.no-danger-area:before,
+.danger-area:before {
+	inset: -5px;
+	border-radius: calc(var(--gap) / 2);
+	border: 5px solid var(--color-background);
+}
+
+.no-danger-area:after,
+.danger-area:after {
+	background-color: var(--color-background);
+	padding-inline: calc(var(--gap) / 2);
+	text-transform: uppercase;
+	right: 10px;
+	top: -20px;
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+}
+
+.no-danger-area {
+	border-color: rgba(153, 221, 102, .5); /* --color-success */
+}
+
+.no-danger-area:after {
+	content: 'Safe area';
+	color: var(--color-primary);
+}
+
+.danger-area {
+	border-color: var(--color-danger);
+}
+
+.danger-area:after {
+	content: 'Danger area';
+	color: var(--color-danger-bright);
+}
+
+.no-danger-area h4,
+.danger-area h4 {
+	position: relative;
+	margin-bottom: calc(var(--gap) * 1.5);
+	color: var(--color-secondary);
+}
+
+.no-danger-area h4:before,
+.danger-area h4:before {
+	content: '';
+	position: absolute;
+	left: -3.6rem;
+	right: -3.6rem;
+	top: 0;
+	height: calc(var(--gap) / 4);
+	background-color: var(--color-background);
 }
 
 

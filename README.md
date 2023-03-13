@@ -39,6 +39,12 @@ Run the same commands directly in the container as shown [here](https://github.c
 _Note: I didn't test it myself._
 
 ## Changelog
+**1.5.3**
+- FIX - Fit all the buttons in the "SYSTEM" section on one line
+- NEW - Showing IP address on checkbox hover in "SYSTEM / DNS" section
+- NEW - LCARS panels in "SYSTEM / DNS" section
+- NEW - LCARS panels in "SYSTEM / SYSTEM" section
+
 **1.5.2**
 - FIX - Shorten stats' boxes animation (it was annoyingly long)
 
