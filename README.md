@@ -39,6 +39,9 @@ Run the same commands directly in the container as shown [here](https://github.c
 _Note: I didn't test it myself._
 
 ## Changelog
+**1.5.4**
+- FIX - "TOOLS / UPDATE GRAVITY" section alerts (thx [tismofied](https://github.com/tismofied), [issue](https://github.com/MichalSvatos/pi-hole-lcars-next-gen/issues/3))
+
 **1.5.3**
 - FIX - Fit all the buttons in the "SYSTEM" section on one line
 - NEW - Showing IP address on checkbox hover in "SYSTEM / DNS" section

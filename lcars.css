@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.5.3
+	- Version:  1.5.4
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -2612,7 +2612,7 @@ table.dataTable tr.selected th.select-checkbox::after {
 	border-radius: calc(var(--gap) * 1.5);
 }
 
-.alert {
+.alert[style] {
 	animation: loadingBlink 1.5s ease-in-out forwards;
 	transition: all ease-in-out 1s;
 	color: var(--color-background) !important;
