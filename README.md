@@ -2,7 +2,7 @@
 
 ***
 
-LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based on the original theme but heavily customized and refactored (still WIP).
+LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based on the original theme but heavily customized and refactored.
 
 [![Dashboard](https://i.imgur.com/PXeXZx7.png)](https://imgur.com/PXeXZx7)
 
@@ -109,6 +109,11 @@ _Note: I didn't test it myself._
 - [LCARS colors](https://codepen.io/Mokurunner/details/wvyKJy)
 - [lcars.org.uk](http://www.lcars.org.uk/) - LCARS panels sections
 - [Jacob Bates](https://github.com/jacobbates) for this installation process
+
+## Star Trek Picard fan?
+Check my other theme (WIP)
+[![Pi-hole Star Trek Picard LCARS Theme](https://github.com/MichalSvatos/pi-hole-star-trek-picard/raw/main/previews/pi-hole-star-trek-picard-lcars.png)](https://github.com/MichalSvatos/pi-hole-lcars-next-gen)
+
 ---
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
