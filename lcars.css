@@ -1,6 +1,6 @@
 /*
 	- Document: Pi-hole LCARS Next Generation Theme
-	- Version:  1.5.4
+	- Version:  1.6.0
 	- Author:   @MichalSvatos, rdwebdesign (author of the original theme)
 	- Description: LCARS Theme for Pi-hole dashboard. Based on the original theme but heavily customized and refactored (WIP).
 	- Disclaimer: Due to fact that I have the access only to CSS I was forced to use some !importants and a lot of IDs. I'm sorry.
@@ -60,10 +60,12 @@
 	--color-disabled: var(--lcars-silver);
 	--color-supplement01: var(--lcars-tanoi);
 	--color-supplement02: #3a1e05; /* same as .2 opacity --color-primary */
+	--color-supplement03: #a856a8;
 
 	/* -- typo */
 	--font-family: Antonio, Oswald, "Myriad Pro Cond", "Roboto Condensed", "Futura Condensed",
 	"Helvetica Condensed", "Arial Narrow", sans-serif;
+	--font-family-mono: "Ubuntu Mono", Consolas, "Courier New", monospace;
 	--font-light: 300;
 	--font-regular: 400;
 	--font-bold: 600;
@@ -104,6 +106,7 @@
 
 html {
 	font-size: 62.5%;
+	color-scheme: dark;
 }
 
 body {
@@ -176,13 +179,6 @@ pre {
 	color: var(--color-success);
 	background-color: var(--color-background);
 	border-radius: calc(var(--gap) * .75);
-}
-
-#network-entries td:first-child a,
-code {
-	margin: 0 2px;
-	padding: calc(var(--gap) / 4) calc(var(--gap) / 2);
-	font-family: "Ubuntu Mono", Consolas, "Courier New", monospace;
 }
 
 #output {
@@ -1126,6 +1122,16 @@ p.login-box-msg,
 	overflow: hidden;
 }
 
+@media (min-width: 768px) {
+	.content {
+		min-height: calc(var(--gap) * 85);
+	}
+
+	.sidebar-collapse .content {
+		min-height: calc(var(--gap) * 55);
+	}
+}
+
 
 /* SIDEBAR / ASIDE
    ========================================================== */
@@ -1802,7 +1808,8 @@ table.table-bordered.dataTable td {
 }
 
 #query-types-pie,
-#forward-destinations-pie {
+#forward-destinations-pie,
+.modal-content {
 	border: 15px solid var(--color-disabled);
 	background-color: var(--color-background);
 	position: relative;
@@ -1815,7 +1822,9 @@ table.table-bordered.dataTable td {
 #query-types-pie:before,
 #query-types-pie:after,
 #forward-destinations-pie:before,
-#forward-destinations-pie:after {
+#forward-destinations-pie:after,
+.modal-content:before,
+.modal-content:after {
 	display: block;
 	content: '';
 	position: absolute;
@@ -1826,7 +1835,8 @@ table.table-bordered.dataTable td {
 }
 
 #query-types-pie:before,
-#forward-destinations-pie:before {
+#forward-destinations-pie:before,
+.modal-content:before {
 	width: .9rem;
 	left: 0;
 	background: var(--color-danger);
@@ -1835,7 +1845,8 @@ table.table-bordered.dataTable td {
 }
 
 #query-types-pie:after,
-#forward-destinations-pie:after {
+#forward-destinations-pie:after,
+.modal-content:after {
 	width: 1.5rem;
 	right: 0;
 	background: var(--color-secondary);
@@ -2291,7 +2302,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 }
 
 #all-queries td:nth-of-type(3) {
-	font-family: "Ubuntu Mono", Consolas, "Courier New", monospace;
+	font-family: var(--font-family-mono);
 	font-weight: var(--font-light);
 	color: var(--color-success);
 }
@@ -2744,6 +2755,7 @@ table.dataTable tr.selected th.select-checkbox::after {
    ========================================================== */
 .small-box {
 	color: var(--color-background) !important;
+	text-align: left;
 }
 
 .small-box p {
@@ -2755,6 +2767,24 @@ table.dataTable tr.selected th.select-checkbox::after {
 .small-box .icon,
 .select2-selection__clear {
 	font-family: sans-serif;
+}
+
+.small-box .icon {
+	font-size: 66px;
+	top: 0;
+}
+
+.small-box:hover .icon {
+	font-size: 66px;
+	transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+	.small-box .icon {
+		display: block;
+		font-size: 56px;
+		top: 5px;
+	}
 }
 
 .small-box.bg-green.no-user-select {
@@ -3430,6 +3460,81 @@ input[type="password"]::-webkit-caps-lock-indicator {
 	filter: invert(100%);
 }
 
+
+/* MODAL (currently only "custom disable timeout"?)
+  ========================================================== */
+
+div.modal {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+	div.modal-sm {
+		width: 100%;
+		max-width: calc(var(--gap) * 30);
+	}
+}
+
+div.modal-content {
+	--_modal-border-color: var(--color-supplement02); /* ready for variants */
+	background: var(--color-background);
+	border-radius: calc(var(--gap) * .75);
+	border-color: var(--_modal-border-color);
+}
+
+div.modal-content::after {
+	background-color: var(--color-danger);
+}
+
+div.modal-header,
+div.modal-footer {
+	border: 0;
+	position: relative;
+}
+
+.modal-title {
+	color: var(--color-danger-bright);
+	font-size: 2.25rem;
+}
+
+.modal-title::before {
+	content: "⚠ ";
+}
+
+.modal-body .btn {
+	padding-top: calc((var(--gap) / 2) - (var(--gap) / 8));
+}
+
+/* --- close button */
+div.modal-header .close {
+	margin-top: 0;
+	width: calc(var(--gap) * 4);
+	height: calc(var(--gap) * 2);
+	opacity: 1;
+	border: calc(var(--gap) / 4) solid var(--_modal-border-color);
+	border-top: 0;
+	border-radius: 0 0  calc(var(--gap) * .75) calc(var(--gap) * .75);
+	color: var(--color-danger);
+	font-size: 1.25rem;
+	text-shadow: none;
+	transition: color var(--transition);
+	position: absolute;
+	inset: calc(var(--gap) * 0) var(--gap) auto auto;
+}
+
+div.modal-header .close:hover {
+	color: #fff;
+}
+
+div.modal-header .close::before {
+	content: attr(aria-label);
+	text-transform: uppercase;
+}
+
+div.modal-header .close span {
+	display: none;
+}
+
 /*** ----------------------------------------------------- ***/
 .not-used {
 	background-color: #222;
@@ -3522,6 +3627,70 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 			var(--color-quinternary) 100%
 	);
 }
+
+
+/* CODE
+  ========================================================== */
+
+section pre,
+section code {
+	background-color: var(--color-background);
+	color: var(--color-success);
+}
+
+section pre {
+	border-color: var(--color-disabled);
+	border-radius: var(--gap);
+	min-height: calc(var(--gap) * 6) !important;
+}
+
+section code {
+	border-radius: calc(var(--gap) * .75);
+	padding: calc(var(--gap) / 4) calc(var(--gap) / 2);
+	font-family: var(--font-family-mono);
+}
+
+#output {
+	color: var(--color-text);
+}
+
+.log-red {
+	color: var(--color-danger-bright);
+}
+
+.log-green {
+	color: var(--color-success);
+}
+
+.log-yellow {
+	color: var(--color-supplement01);
+}
+
+.log-blue {
+	color: var(--color-link);
+}
+
+.log-purple {
+	color: var(--color-supplement03);
+}
+
+.log-cyan {
+	color: var(--color-secondary-hover);
+}
+
+.log-gray {
+	color: var(--color-secondary);
+}
+
+.text-muted {
+	color: var(--color-disabled);
+}
+
+td pre {
+	min-height: auto !important;
+}
+
+
 
 
 /* ANIMATIONS

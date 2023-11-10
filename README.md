@@ -39,6 +39,13 @@ Run the same commands directly in the container as shown [here](https://github.c
 _Note: I didn't test it myself._
 
 ## Changelog
+**1.6.0**
+- NEW - DISABLE BLOCKING / CUSTOM TIME modal window styled
+- FIX - showed icons in the 4 status boxes on dashboard on mobile + hover adjustment
+- FIX - added min-height to `.content` to avoid incorrect footer position when TOOLS menu is open
+- FIX - Add `color-scheme: dark` to avoid problems with browser's "Force dark mode" option (copy of the commit [7c2ebef](https://github.com/MichalSvatos/AdminLTE/commit/7c2ebef62b4c79844afed24e5b61d698e93618f1) )
+- FIX - colored log has actually colors again
+
 **1.5.4**
 - FIX - "TOOLS / UPDATE GRAVITY" section alerts (thx [tismofied](https://github.com/tismofied), [issue](https://github.com/MichalSvatos/pi-hole-lcars-next-gen/issues/3))
 
