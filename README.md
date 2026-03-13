@@ -4,11 +4,7 @@
 
 LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based on the original theme but heavily customized and refactored.
 
-[![Dashboard](https://i.imgur.com/PXeXZx7.png)](https://imgur.com/PXeXZx7)
-
-[![Settings](https://i.imgur.com/41QmuUW.png)](https://imgur.com/41QmuUW)
-
-[![Adlist](https://i.imgur.com/uKqZMMG.png)](https://imgur.com/uKqZMMG)
+### 🖖 Theme is now once again **FULLY COMPATIBLE with Pi-hole**!
 
 ### ℹ️ This theme replaces the original blue LCARS theme
 
@@ -25,6 +21,8 @@ sudo rm -rf pi-hole-lcars-next-gen
 
 ⚠️ Check the trailing " ." on the 3rd line (it's not a typo - it means copy to current directory).
 
+ℹ️ **[v5]** `lcars-v5.css` - older version kept for a better compatibility if someone needs to run Pi-hole v5.
+
 ## Uninstall/Revert
 Type the following commands into SSH, line by line.
 
@@ -36,9 +34,16 @@ sudo git reset --hard
 ## Docker installation
 Run the same commands directly in the container as shown [here](https://github.com/MichalSvatos/pi-hole-lcars-next-gen/issues/1#issuecomment-1372378045).
 
-_Note: I didn't test it myself._
+## Preview
+![Pi-hole LCARS Next Generation Theme Dashboard Preview](https://github.com/MichalSvatos/pi-hole-lcars-next-gen/raw/main/previews/showcase-lcars-tng.webp)
 
 ## Changelog
+**2.0.0 (Pi-hole v6)**
+- FIX - all the broken things from v5
+- NEW - added a few bells and whistles, courtesy of my other [theme](https://github.com/MichalSvatos/pi-hole-star-trek-picard) 😉
+
+<details>
+  <summary>v1.0.0+</summary>
 **1.6.0**
 - NEW - DISABLE BLOCKING / CUSTOM TIME modal window styled
 - FIX - showed icons in the 4 status boxes on dashboard on mobile + hover adjustment
@@ -110,6 +115,7 @@ _Note: I didn't test it myself._
 **1.0.1**
 - fix for small black box in the top bar on smaller screens
 - polishing of the 2(3) buttons in the right top corner
+</details>
 
 ## Thanks to ...
 - [RD Webdesign](https://github.com/rdwebdesign) - creator of the original theme
@@ -118,8 +124,18 @@ _Note: I didn't test it myself._
 - [Jacob Bates](https://github.com/jacobbates) for this installation process
 
 ## Star Trek Picard fan?
-Check my other theme (WIP)
+Check my other theme
 [![Pi-hole Star Trek Picard LCARS Theme](https://github.com/MichalSvatos/pi-hole-star-trek-picard/raw/main/previews/pi-hole-star-trek-picard-lcars.png)](https://github.com/MichalSvatos/pi-hole-star-trek-picard)
+
+## Like my work?️
+Just **spread the word**. But if you feel like it, any donations are highly appreciated ❤️!
+
+#### Monero
+![Monero QR code](https://github.com/MichalSvatos/pi-hole-star-trek-picard/raw/main/imgs/qr-monero.png)
+`82cdV2a1RU34pnv7x4tQtV4pTv1wgM5DjFEM1SQz8keF2z6ZidSbpNq51p8S3NMdYwh5PecSRBuSkAthbEmJUisoHVj6W8o`
+
+#### Ko-fi
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N01UB2M9)
 
 ---
 ### License
