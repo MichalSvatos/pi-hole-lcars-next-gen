@@ -1,14 +1,15 @@
-# Pi-hole LCARS Next Generation Theme
+[![Pi-hole LCARS Next Generation Theme](https://github.com/MichalSvatos/pi-hole-star-trek-picard/raw/main/previews/pi-hole-tng-lcars.png)](https://github.com/MichalSvatos/pi-hole-lcars-next-gen)
 
 ***
+
+# Pi-hole LCARS Next Generation Theme
 
 LCARS Theme for [Pi-hole](https://github.com/pi-hole/pi-hole) dashboard. Based on the original theme but heavily customized and refactored.
 
 ### 🖖 Theme is now once again **FULLY COMPATIBLE with Pi-hole**!
 
-### ℹ️ This theme replaces the original blue LCARS theme
-
 ## Installation
+#### ℹ️ This theme replaces the original blue LCARS theme
 Type the following commands into SSH, line by line.
 
 ```
